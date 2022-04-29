@@ -1,0 +1,137 @@
+:root {
+	--clr-bright_orange: hsl(31, 77%, 52%);
+	--clr-dark_cyan: hsl(184, 100%, 22%);
+	--clr-vdark_cyan: hsl(179, 100%, 13%);
+	--clr-trans_white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+	--clr-vlight_gray: hsl(0, 0%, 95%); /*bg, headings, buttons*/
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.2rem;
+	font-family: "Lexend Deca", sans-serif;
+	height: 100vh;
+	background: var(--clr-vlight_gray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container {
+	width: 80%;
+}
+img {
+	width: 50px;
+	height: 30px;
+}
+h1 {
+	font-family: "Big Shoulders Display", cursive;
+	text-transform: uppercase;
+	color: var(--clr-vlight_gray);
+	letter-spacing: 0.1rem;
+}
+p {
+	color: var(--clr-trans_white);
+	line-height: 2rem;
+	width: 25ch;
+	margin-bottom: 2rem;
+}
+.btn {
+	background: var(--clr-vlight_gray);
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	width: 65%;
+	padding: 1rem;
+}
+.btn:hover {
+	cursor: pointer;
+}
+.card {
+	text-align: left;
+	padding: 3rem;
+}
+.card-content {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	margin: auto;
+}
+.card-sedan {
+	background: var(--clr-bright_orange);
+	border-radius: 10px 10px 0 0;
+}
+.btn-sedan {
+	color: var(--clr-bright_orange);
+	transition: all 0.2s;
+}
+.btn-sedan:hover {
+	background: var(--clr-bright_orange);
+	color: var(--clr-trans_white);
+	border: 1px solid var(--clr-trans_white);
+}
+.card-suv {
+	background: var(--clr-dark_cyan);
+}
+.btn-suv {
+	color: var(--clr-dark_cyan);
+	transition: all 0.2s;
+}
+.btn-suv:hover {
+	background: var(--clr-dark_cyan);
+	border: 1px solid var(--clr-trans_white);
+	color: var(--clr-trans_white);
+}
+.card-luxury {
+	background: var(--clr-vdark_cyan);
+	border-radius: 0 0 10px 10px;
+}
+.btn-luxury {
+	color: var(--clr-vdark_cyan);
+	transition: all 0.2s;
+}
+.btn-luxury:hover {
+	background: var(--clr-vdark_cyan);
+	border: 1px solid var(--clr-trans_white);
+	color: var(--clr-trans_white);
+}
+@media screen and (min-width: 425px) {
+	.container {
+		width: 340px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	body {
+		display: block;
+		font-size: 1.6rem;
+	}
+	.btn {
+		width: 80%;
+	}
+	.container {
+		display: flex;
+		width: 80vw;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: auto;
+		transform: translate(-50%, -50%);
+		justify-content: center;
+	}
+	.card-content {
+		margin: 0;
+	}
+	.card {
+		padding: 3rem;
+	}
+	.card-sedan {
+		border-radius: 10px 0 0 10px;
+	}
+	.card-luxury {
+		border-radius: 0 10px 10px 0;
+	}
+	p {
+		width: 23ch;
+		margin-bottom: 8rem;
+	}
+}
