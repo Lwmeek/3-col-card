@@ -39,7 +39,7 @@ p {
 .btn {
 	background: var(--clr-vlight_gray);
 	outline: none;
-	border: none;
+	border: 1px solid var(--clr-vlight_gray);
 	border-radius: 30px;
 	width: 65%;
 	padding: 1rem;
